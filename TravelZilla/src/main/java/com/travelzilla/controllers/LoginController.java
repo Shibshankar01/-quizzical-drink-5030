@@ -32,5 +32,7 @@ public class LoginController {
 	public ResponseEntity<String> logout(@RequestParam(name = "userId") Integer userId, @RequestParam(name = "userType") UserType userType)throws LoginException{
 		String response =  lServices.logout(userId, userType);
 		return new ResponseEntity<String>(response, HttpStatus.ACCEPTED);
+
+		// start implemetig jwt token
 	}
 }
